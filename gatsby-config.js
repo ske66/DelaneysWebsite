@@ -3,6 +3,14 @@ module.exports = {
     title: "Delaney's Site",
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/images/`,
+      },
+    },
     {
       resolve: "gatsby-source-contentful",
       options: {

@@ -5,8 +5,8 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
-  "component---cache-dev-404-page-js": hot(preferDefault(require("C:\\Users\\Mark\\Desktop\\delaneys-site\\.cache\\dev-404-page.js"))),
-  "component---src-pages-404-js": hot(preferDefault(require("C:\\Users\\Mark\\Desktop\\delaneys-site\\src\\pages\\404.js"))),
-  "component---src-pages-index-js": hot(preferDefault(require("C:\\Users\\Mark\\Desktop\\delaneys-site\\src\\pages\\index.js")))
+  "component---cache-dev-404-page-js": hot(preferDefault(require("/Users/markbarton/Desktop/DelaneysWebsite/.cache/dev-404-page.js"))),
+  "component---src-pages-404-js": hot(preferDefault(require("/Users/markbarton/Desktop/DelaneysWebsite/src/pages/404.js"))),
+  "component---src-pages-index-js": hot(preferDefault(require("/Users/markbarton/Desktop/DelaneysWebsite/src/pages/index.js")))
 }
 

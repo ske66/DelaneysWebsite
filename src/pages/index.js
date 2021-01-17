@@ -1,7 +1,8 @@
 import * as React from "react";
 import Menu from "../components/menu";
-import Hero from "../components/hero";
-import About from "../components/about";
+import Hero from "../components/home-hero";
+import About from "../components/home-about";
+import Projects from "../components/home-projects";
 
 // markup
 const IndexPage = () => {
@@ -10,6 +11,7 @@ const IndexPage = () => {
       <Menu />
       <Hero />
       <About />
+      <Projects />
     </main>
   );
 };
