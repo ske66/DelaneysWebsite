@@ -4,7 +4,6 @@ import Button from "./button";
 import { InstagramButton, LinkedInButton, EmailButton } from "./icon_button";
 
 function About({ data }) {
-  console.log(data.image.fluid);
   return (
     <section className="bg-pink-100 py-24 p-8">
       <div className="flex container mx-auto max-w-7xl ">

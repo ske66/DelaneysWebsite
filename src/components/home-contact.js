@@ -12,13 +12,13 @@ function Contact() {
         <div className="bg-white w-6 h-0.5 my-auto" />
         <h5 className="text-white pl-4">Contact</h5>
       </div>
-      <div className="container mx-auto grid grid-cols-2 max-w-7xl my-16">
+      <div className="container mx-auto grid grid-cols-2 max-w-7xl my-16 space-x-16">
         <div className="my-auto ml-16">
           <h2 className="text-white">Contact Me</h2>
           <h6 className="mt-4">Send an email</h6>
           <p className="text-white mt-4 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut.
+            if you have any questions or want to discuss potential work
+            opertunities, you can contact me using the form below
           </p>
           <input
             name="email"

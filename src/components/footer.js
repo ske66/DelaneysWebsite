@@ -4,11 +4,12 @@ import { EmailButton, LinkedInButton } from "./icon_button";
 
 const Footer = ({ email, linkedIn, instagram }) => {
   return (
-    <footer className="footer bg-gray-600 relative pt-1">
+    <footer className="footer bg-gray-900 relative pt-1">
       <div className="container max-w-7xl mx-auto px-6 gap-x-16 grid grid-cols-5 py-16">
         <div className="col-span-2">
-          <p>Hello World</p>
-          <p className="mt-8">
+          <h6 className="text-white">Delaney Nicol Online Portfolio</h6>
+          <div className="h-1 w-4 bg-pink-300 mt-2"></div>
+          <p className="mt-8 text-white">
             Website Designed and developed by Mark Barton. (With Gatsby and
             Contentful.)
           </p>
@@ -18,8 +19,9 @@ const Footer = ({ email, linkedIn, instagram }) => {
           </div>
         </div>
         <div>
-          <h6 className="text-white mb-4">Site Map</h6>
-          <ul className="leading-8">
+          <h6 className="text-white">Site Map</h6>
+          <div className="h-1 w-4 bg-pink-300 mt-2"></div>
+          <ul className="leading-8 mt-4">
             <li>
               <Link
                 className="text-white opacity-80"
@@ -50,8 +52,10 @@ const Footer = ({ email, linkedIn, instagram }) => {
           </ul>
         </div>
         <div>
-          <h6 className="text-white mb-4">Socials</h6>
-          <ul className="leading-8">
+          <h6 className="text-white">Socials</h6>
+          <div className="h-1 w-4 bg-pink-300 mt-2"></div>
+
+          <ul className="leading-8 mt-4">
             <li>
               <Link
                 className="text-white opacity-80"
@@ -78,19 +82,45 @@ const Footer = ({ email, linkedIn, instagram }) => {
           </ul>
         </div>
         <div>
-          <h6 className="text-white mb-4">Technology</h6>
-          <ul className="leading-8">
+          <h6 className="text-white">Technology</h6>
+          <div className="h-1 w-4 bg-pink-300 mt-2"></div>
+
+          <ul className="leading-8 mt-4">
             <li>
-              <Link className="text-white opacity-80">React</Link>
+              <Link
+                className="text-white opacity-80"
+                to="https://reactjs.org/"
+                target="_blank"
+              >
+                React
+              </Link>
             </li>
             <li>
-              <Link className="text-white opacity-80">Gatsby</Link>
+              <Link
+                className="text-white opacity-80"
+                to="https://www.gatsbyjs.com/"
+                target="_blank"
+              >
+                Gatsby
+              </Link>
             </li>
             <li>
-              <Link className="text-white opacity-80">Contentful</Link>
+              <Link
+                className="text-white opacity-80"
+                to="https://www.contentful.com/"
+                target="_blank"
+              >
+                Contentful
+              </Link>
             </li>
             <li>
-              <Link className="text-white opacity-80">Graphql</Link>
+              <Link
+                className="text-white opacity-80"
+                to="https://graphql.org/"
+                target="_blank"
+              >
+                Graphql
+              </Link>
             </li>
           </ul>
         </div>

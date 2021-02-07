@@ -1,14 +1,14 @@
-import * as React from "react";
+import React from "react";
 import Menu from "../components/menu";
 import Hero from "../components/home-hero";
 import About from "../components/home-about";
 import Projects from "../components/home-projects";
 import Contact from "../components/home-contact";
 import Footer from "../components/footer";
+import { graphql } from "gatsby";
 
 // markup
 const IndexPage = ({ data }) => {
-  console.log(data.allFile.edges[0].node.childrenImageSharp[0].fluid);
   return (
     <main className="mx-auto">
       <Menu />

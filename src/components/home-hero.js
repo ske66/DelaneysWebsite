@@ -17,7 +17,7 @@ const Hero = ({ data, image }) => {
           </div>
         </div>
       </div>
-      <Img fluid={image} />
+      <img src={image.src} />
     </section>
   );
 };

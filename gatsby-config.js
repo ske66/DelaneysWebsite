@@ -25,12 +25,5 @@ module.exports = {
       },
     },
     "gatsby-plugin-postcss",
-    {
-      resolve: `@ccalamos/gatsby-source-googlemaps-static`,
-      options: {
-        key: `AIzaSyDS1cHIwBkLgErLHVI4Sm0LTdqmC81UQNM`,
-        center: `55.94968409565284, -3.1902715268121535`,
-      },
-    },
   ],
 };
