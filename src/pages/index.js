@@ -9,11 +9,13 @@ import { graphql } from "gatsby";
 
 // markup
 const IndexPage = ({ data }) => {
-  console.log(data);
   return (
     <main className="mx-auto">
       <Menu />
-      <Hero data={data.allContentfulHero.edges[0].node} />
+      <Hero
+        latestProjectSlug={data.allContentfulProject.edges[0].node.slug}
+        data={data.allContentfulHero.edges[0].node}
+      />
       <About data={data.allContentfulAbout.edges[0].node} />
       <Projects projects={data.allContentfulProject.edges} />
       <Contact />
@@ -70,9 +72,7 @@ export const pageQuery = graphql`
           }
           images {
             fluid {
-              base64
-              srcWebp
-              srcSetWebp
+              ...GatsbyContentfulFluid
             }
           }
         }

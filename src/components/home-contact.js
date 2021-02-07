@@ -18,7 +18,7 @@ function Contact() {
           <h6 className="mt-4">Send an email</h6>
           <p className="text-white mt-4 mb-8">
             if you have any questions or want to discuss potential work
-            opertunities, you can contact me using the form below
+            opportunities, you can contact me using the form below
           </p>
           <input
             name="email"

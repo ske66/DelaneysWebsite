@@ -14,13 +14,14 @@ function About({ data }) {
         <Img
           className="rounded-full h-80 w-80 object-cover object-bottom"
           fluid={data.image.fluid}
+          key={data.image.fluid.src}
         />
         <div className="col-span-3 my-auto ml-16">
           <h2>{data.title}</h2>
           <h6 className="mt-4">{data.subtitle}</h6>
           <p className="mt-4 mb-12">{data.content.content}</p>
           <div className="flex space-x-8">
-            <Button>Contact Me</Button>
+            <Button to="/">Contact Me</Button>
             <div className="flex space-x-8">
               <InstagramButton link={data.instagramLink} />
               <LinkedInButton link={data.linkedInLink} />

@@ -30,7 +30,11 @@ function Projects({ projects }) {
           <div className="bg-gray-100">
             <h3 className="p-8">{projects[0].node.quote}</h3>
           </div>
-          <Img className="mt-8" fluid={projects[1].node.images[0].fluid} />
+          <Img
+            className="mt-16"
+            fluid={projects[0].node.images[0].fluid}
+            key={projects[0].node.images[0].fluid.src}
+          />
         </div>
       </div>
 
@@ -39,7 +43,11 @@ function Projects({ projects }) {
           <div className="bg-gray-100">
             <h3 className="p-8">{projects[1].node.quote}</h3>{" "}
           </div>
-          <Img className="mt-8" fluid={projects[1].node.images[0].fluid} />
+          <Img
+            className="mt-16"
+            fluid={projects[1].node.images[0].fluid}
+            key={projects[1].node.images[0].fluid.src}
+          />
         </div>
         <div>
           <h2>{projects[1].node.title}</h2>

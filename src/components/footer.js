@@ -10,8 +10,7 @@ const Footer = ({ email, linkedIn, instagram }) => {
           <h6 className="text-white">Delaney Nicol Online Portfolio</h6>
           <div className="h-1 w-4 bg-pink-300 mt-2"></div>
           <p className="mt-8 text-white">
-            Website Designed and developed by Mark Barton. (With Gatsby and
-            Contentful.)
+            Website developed by Mark Barton. (With Gatsby and Contentful.)
           </p>
           <div className="container grid grid-cols-6 mt-8">
             <LinkedInButton />

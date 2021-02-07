@@ -1,8 +1,7 @@
 import React from "react";
 import Button from "./button";
-import Img from "gatsby-image";
 
-const Hero = ({ data }) => {
+const Hero = ({ data, latestProjectSlug }) => {
   return (
     <section className="my-32 p-8">
       <div className="relative container mx-auto text-center h-96 w-full flex items-center justify-center max-w-7xl">
@@ -11,9 +10,10 @@ const Hero = ({ data }) => {
           <h1 className="z-40">{data.title}</h1>
           <div className="w-6 h-1 bg-gray-700 rounded"></div>
           <h4 className="max-w-screen-sm">{data.subtitle}</h4>
-          <div className="flex place-items-center space-x-8">
-            <Button>Recent Project</Button>
-            <Button>Past Projects</Button>
+          <div className="flex place-items-center space-x-8 pt-6">
+            <Button link={`projects/${latestProjectSlug}`}>
+              View Latest Projects
+            </Button>
           </div>
         </div>
       </div>
