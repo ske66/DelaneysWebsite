@@ -1,6 +1,12 @@
+const dotenv = require("dotenv");
+
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config();
+}
+
 module.exports = {
   siteMetadata: {
-    title: "Delaney's Site",
+    title: "Delaney Nicol - Costume Maker & Designer",
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -14,10 +20,17 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "e0_uGbjhV6l_wKLag_a3RoqW_d4esTJ8_kkgQ1PRGJU",
-        spaceId: "h9kxs8r5gc5c",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
     "gatsby-plugin-postcss",
+    {
+      resolve: `@ccalamos/gatsby-source-googlemaps-static`,
+      options: {
+        key: `AIzaSyDS1cHIwBkLgErLHVI4Sm0LTdqmC81UQNM`,
+        center: `55.94968409565284, -3.1902715268121535`,
+      },
+    },
   ],
 };

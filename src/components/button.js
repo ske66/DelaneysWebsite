@@ -1,10 +1,29 @@
 import React from "react";
+import { Link } from "gatsby";
 
-const Button = (props) => {
+const Button = ({ className, children, type, link }) => {
+  var buttonType;
+
+  switch (type) {
+    case "primary":
+      buttonType = "bg-pink-500 hover:bg-pink-600";
+      break;
+    case "secondary":
+      buttonType = "bg-gray-600 hover:bg-gray-700";
+      break;
+    default:
+      buttonType = "bg-pink-500 hover:bg-pink-600";
+      break;
+  }
+
   return (
-    <button class="bg-pink-500 font-medium shadow-sm hover:bg-pink-600 text-white px-4 py-3 rounded w-48 duration-200 ease-in-out transition">
-      {props.text}
-    </button>
+    <Link to={link}>
+      <button
+        className={`font-medium shadow-sm text-white px-8 w-64 py-3 rounded duration-200 ease-in-out transition ${className} ${buttonType}`}
+      >
+        {children}
+      </button>
+    </Link>
   );
 };
 
