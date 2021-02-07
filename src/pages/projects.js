@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Footer from "../components/footer";
 import Menu from "../components/menu";
 
@@ -30,7 +30,7 @@ function Projects({ data }) {
 export default Projects;
 
 export const pageQuery = graphql`
-  query {
+  query ProjectsPageQuery {
     allContentfulAbout {
       edges {
         node {
@@ -44,7 +44,10 @@ export const pageQuery = graphql`
           email
           image {
             fluid {
-              ...GatsbyContentfulFluid
+              base64
+              tracedSVG
+              srcWebp
+              srcSetWebp
             }
           }
         }
@@ -61,7 +64,10 @@ export const pageQuery = graphql`
           }
           images {
             fluid {
-              ...GatsbyContentfulFluid
+              base64
+              tracedSVG
+              srcWebp
+              srcSetWebp
             }
           }
         }

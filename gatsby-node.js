@@ -7,7 +7,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return graphql(`
-    {
+    query GeneratePageQuery {
       allContentfulProject {
         edges {
           node {
@@ -16,6 +16,14 @@ exports.createPages = ({ graphql, actions }) => {
             slug
             body {
               body
+            }
+            images {
+              fluid {
+                base64
+                tracedSVG
+                srcWebp
+                srcSetWebp
+              }
             }
           }
         }
@@ -27,7 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
         console.log("Error with contentful data", result.errors);
       }
 
-      const projectTemplate = path.resolve("./src/pages/project.js");
+      const projectTemplate = path.resolve("./src/templates/project.js");
 
       result.data.allContentfulProject.edges.forEach((project) => {
         createPage({

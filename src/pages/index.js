@@ -9,13 +9,11 @@ import { graphql } from "gatsby";
 
 // markup
 const IndexPage = ({ data }) => {
+  console.log(data);
   return (
     <main className="mx-auto">
       <Menu />
-      <Hero
-        image={data.allFile.edges[0].node.childrenImageSharp[0].fluid}
-        data={data.allContentfulHero.edges[0].node}
-      />
+      <Hero data={data.allContentfulHero.edges[0].node} />
       <About data={data.allContentfulAbout.edges[0].node} />
       <Projects projects={data.allContentfulProject.edges} />
       <Contact />
@@ -31,18 +29,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query {
-    allFile {
-      edges {
-        node {
-          childrenImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
+  query IndexPageQuery {
     allContentfulAbout {
       edges {
         node {
@@ -56,7 +43,10 @@ export const pageQuery = graphql`
           email
           image {
             fluid {
-              ...GatsbyContentfulFluid
+              base64
+              tracedSVG
+              srcWebp
+              srcSetWebp
             }
           }
         }
@@ -81,7 +71,10 @@ export const pageQuery = graphql`
           }
           images {
             fluid {
-              ...GatsbyContentfulFluid
+              base64
+              tracedSVG
+              srcWebp
+              srcSetWebp
             }
           }
         }

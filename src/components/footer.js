@@ -24,6 +24,7 @@ const Footer = ({ email, linkedIn, instagram }) => {
           <ul className="leading-8 mt-4">
             <li>
               <Link
+                rel="noreferrer"
                 className="text-white opacity-80"
                 href={linkedIn}
                 target="_blank"
@@ -33,6 +34,7 @@ const Footer = ({ email, linkedIn, instagram }) => {
             </li>
             <li>
               <Link
+                rel="noreferrer"
                 className="text-white opacity-80"
                 href={linkedIn}
                 target="_blank"
@@ -42,6 +44,7 @@ const Footer = ({ email, linkedIn, instagram }) => {
             </li>
             <li>
               <Link
+                rel="noreferrer"
                 className="text-white opacity-80"
                 href={linkedIn}
                 target="_blank"
@@ -58,6 +61,7 @@ const Footer = ({ email, linkedIn, instagram }) => {
           <ul className="leading-8 mt-4">
             <li>
               <Link
+                rel="noreferrer"
                 className="text-white opacity-80"
                 href={linkedIn}
                 target="_blank"
@@ -67,6 +71,7 @@ const Footer = ({ email, linkedIn, instagram }) => {
             </li>
             <li>
               <Link
+                rel="noreferrer"
                 className="text-white opacity-80"
                 href={instagram}
                 target="_blank"
@@ -75,7 +80,11 @@ const Footer = ({ email, linkedIn, instagram }) => {
               </Link>
             </li>
             <li>
-              <Link className="text-white opacity-80" href={"mailto:" + email}>
+              <Link
+                rel="noreferrer"
+                className="text-white opacity-80"
+                href={"mailto:" + email}
+              >
                 Email
               </Link>
             </li>
@@ -88,6 +97,7 @@ const Footer = ({ email, linkedIn, instagram }) => {
           <ul className="leading-8 mt-4">
             <li>
               <Link
+                rel="noreferrer"
                 className="text-white opacity-80"
                 to="https://reactjs.org/"
                 target="_blank"
@@ -97,6 +107,7 @@ const Footer = ({ email, linkedIn, instagram }) => {
             </li>
             <li>
               <Link
+                rel="noreferrer"
                 className="text-white opacity-80"
                 to="https://www.gatsbyjs.com/"
                 target="_blank"
@@ -106,6 +117,7 @@ const Footer = ({ email, linkedIn, instagram }) => {
             </li>
             <li>
               <Link
+                rel="noreferrer"
                 className="text-white opacity-80"
                 to="https://www.contentful.com/"
                 target="_blank"
@@ -115,6 +127,7 @@ const Footer = ({ email, linkedIn, instagram }) => {
             </li>
             <li>
               <Link
+                rel="noreferrer"
                 className="text-white opacity-80"
                 to="https://graphql.org/"
                 target="_blank"

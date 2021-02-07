@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./button";
 import Img from "gatsby-image";
 
-const Hero = ({ data, image }) => {
+const Hero = ({ data }) => {
   return (
     <section className="my-32 p-8">
       <div className="relative container mx-auto text-center h-96 w-full flex items-center justify-center max-w-7xl">
@@ -17,7 +17,6 @@ const Hero = ({ data, image }) => {
           </div>
         </div>
       </div>
-      <img src={image.src} />
     </section>
   );
 };

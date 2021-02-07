@@ -12,7 +12,7 @@ function Project({ data }) {
 export default Project;
 
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query ProjectTemplateQuery($slug: String!) {
     project: contentfulProject(slug: { eq: $slug }) {
       slug
       title
@@ -22,7 +22,10 @@ export const pageQuery = graphql`
       }
       images {
         fluid {
-          ...GatsbyContentfulFluid
+          base64
+          tracedSVG
+          srcWebp
+          srcSetWebp
         }
       }
     }
