@@ -45,7 +45,6 @@ export const pageQuery = graphql`
           image {
             fluid {
               base64
-              tracedSVG
               srcWebp
               srcSetWebp
             }
@@ -65,7 +64,6 @@ export const pageQuery = graphql`
           images {
             fluid {
               base64
-              tracedSVG
               srcWebp
               srcSetWebp
             }

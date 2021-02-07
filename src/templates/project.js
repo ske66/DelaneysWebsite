@@ -23,7 +23,6 @@ export const pageQuery = graphql`
       images {
         fluid {
           base64
-          tracedSVG
           srcWebp
           srcSetWebp
         }

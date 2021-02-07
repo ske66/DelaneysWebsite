@@ -20,7 +20,6 @@ exports.createPages = ({ graphql, actions }) => {
             images {
               fluid {
                 base64
-                tracedSVG
                 srcWebp
                 srcSetWebp
               }
