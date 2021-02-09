@@ -13,10 +13,14 @@ const IndexPage = ({ data }) => {
     <main className="mx-auto">
       <Menu />
       <Hero
+        leaves={data.allFile.edges[0].node.childImageSharp.fixed}
         latestProjectSlug={data.allContentfulProject.edges[0].node.slug}
         data={data.allContentfulHero.edges[0].node}
       />
-      <About data={data.allContentfulAbout.edges[0].node} />
+      <About
+        backgroundImage={data.allFile.edges[2].node.childImageSharp.fluid}
+        data={data.allContentfulAbout.edges[0].node}
+      />
       <Projects projects={data.allContentfulProject.edges} />
       <Contact />
       <Footer
@@ -32,6 +36,17 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageQuery {
+    allFile {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 800, height: 800) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
     allContentfulAbout {
       edges {
         node {
@@ -45,9 +60,7 @@ export const pageQuery = graphql`
           email
           image {
             fluid {
-              base64
-              srcWebp
-              srcSetWebp
+              ...GatsbyContentfulFluid
             }
           }
         }
@@ -70,7 +83,7 @@ export const pageQuery = graphql`
           body {
             body
           }
-          images {
+          featureImage {
             fluid {
               ...GatsbyContentfulFluid
             }

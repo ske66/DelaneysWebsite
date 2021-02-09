@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 
 function Projects({ projects }) {
   return (
-    <section className="py-24 p-8">
+    <section className="py-24 p-8 bg-white">
       <div className="container mx-auto max-w-7xl flex">
         <div className="bg-gray-300 w-6 h-0.5 my-auto" />
         <h5 className="pl-4">Projects</h5>
@@ -32,21 +32,21 @@ function Projects({ projects }) {
           </div>
           <Img
             className="mt-16"
-            fluid={projects[0].node.images[0].fluid}
-            key={projects[0].node.images[0].fluid.src}
+            fluid={projects[0].node.featureImage.fluid}
+            key={projects[0].node.featureImage.fluid.src}
           />
         </div>
       </div>
 
-      <div className="mx-auto grid container grid-cols-2 gap-x-16 max-w-7xl mt-32">
+      <div className="mx-auto grid container grid-cols-2 gap-x-16 max-w-7xl mt-48">
         <div>
           <div className="bg-gray-100">
             <h3 className="p-8">{projects[1].node.quote}</h3>{" "}
           </div>
           <Img
             className="mt-16"
-            fluid={projects[1].node.images[0].fluid}
-            key={projects[1].node.images[0].fluid.src}
+            fluid={projects[1].node.featureImage.fluid}
+            key={projects[1].node.featureImage.fluid.src}
           />
         </div>
         <div>

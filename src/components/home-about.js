@@ -2,6 +2,7 @@ import React from "react";
 import Img from "gatsby-image";
 import Button from "./button";
 import { InstagramButton, LinkedInButton, EmailButton } from "./icon_button";
+import cv from "../downloads/CV-2021.pdf";
 
 function About({ data }) {
   return (
@@ -21,7 +22,7 @@ function About({ data }) {
           <h6 className="mt-4">{data.subtitle}</h6>
           <p className="mt-4 mb-12">{data.content.content}</p>
           <div className="flex space-x-8">
-            <Button to="/">Contact Me</Button>
+            <Button href={cv}>View My CV</Button>
             <div className="flex space-x-8">
               <InstagramButton link={data.instagramLink} />
               <LinkedInButton link={data.linkedInLink} />

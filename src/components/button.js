@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const Button = ({ className, children, type, link }) => {
+const Button = ({ className, children, type, link, href }) => {
   var buttonType;
 
   switch (type) {
@@ -17,7 +17,7 @@ const Button = ({ className, children, type, link }) => {
   }
 
   return (
-    <Link to={link}>
+    <Link to={link} href={href}>
       <button
         className={`font-medium shadow-sm text-white px-8 w-64 py-3 rounded duration-200 ease-in-out transition ${className} ${buttonType}`}
       >
