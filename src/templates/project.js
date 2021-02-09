@@ -9,7 +9,6 @@ function Project({ data }) {
   const IMAGES = [];
 
   data.project.images.map((i) => {
-    console.log(400 * i.fluid.aspectRatio);
     const image = {
       src: i.fluid.src,
       thumbnail: i.fluid.src,
@@ -18,7 +17,7 @@ function Project({ data }) {
 
     IMAGES.push(image);
   });
-
+  console.log(data.project.subtitle);
   return (
     <main className="mx-auto">
       <Menu />
@@ -28,7 +27,10 @@ function Project({ data }) {
             <h1 className="z-40">{data.project.title}</h1>
             <div className="w-6 h-1 bg-gray-700 rounded" />
             <div>
-              <h6>{format(new Date(data.project.date), "MMM yyyy")}</h6>
+              <h6>{data.project.subtitle}</h6>
+
+              <p className="mt-24">{data.project.summary.summary}</p>
+
               <h3 className="mt-24 mb-8">Gallery</h3>
               <Gallery
                 rowHeight={340}
@@ -58,7 +60,10 @@ export const pageQuery = graphql`
       slug
       title
       quote
-      date
+      subtitle
+      summary {
+        summary
+      }
       body {
         body
       }
